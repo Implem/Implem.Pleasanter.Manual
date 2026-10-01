@@ -1,0 +1,12 @@
+title: API
+
+nav:
+  - index.md
+  - basics
+  - table-operations
+  - site-operations
+  - tenant-operations
+  - user-operations
+  - department-operations
+  - group-operations
+  - mail

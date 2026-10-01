@@ -1,0 +1,11 @@
+title: 基本
+
+nav:
+  - index.md
+  - server-script-create-edit.md
+  - server-script-debug.md
+  - server-script-functionalize.md
+  - server-script-try-catch.md
+  - server-script-conditions.md
+  - server-script-shared.md
+  - server-script-include.md

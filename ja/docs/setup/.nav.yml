@@ -1,0 +1,9 @@
+title: セットアップ
+
+nav:
+  - index.md
+  - installation
+  - version-up-migration
+  - parameters
+  - additional
+  - codedefiner

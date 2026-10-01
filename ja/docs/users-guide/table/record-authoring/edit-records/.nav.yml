@@ -1,0 +1,29 @@
+title: レコード編集
+
+nav:
+  - index.md
+  - table-record-progression-rate.md
+  - table-site-integration.md
+  - table-editor.md
+  - table-record-edit.md
+  - table-record-bulkupdate.md
+  - table-record-editongrid.md
+  - table-record-history-view.md
+  - table-record-history-restore.md
+  - table-record-history-delete.md
+  - table-record-delete.md
+  - table-record-bulkdelete.md
+  - table-record-restore.md
+  - table-record-physical-delete.md
+  - table-record-copy.md
+  - table-record-referencecopy.md
+  - table-record-separate.md
+  - table-record-move.md
+  - table-record-bulkmove.md
+  - table-record-lock.md
+  - table-record-unlock.md
+  - table-record-attachment-upload.md
+  - table-record-attachment-download.md
+  - table-record-attachment-delete.md
+  - table-record-attachment-show.md
+  - table-record-upload-picture.md

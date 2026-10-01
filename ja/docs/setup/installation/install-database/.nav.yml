@@ -1,0 +1,13 @@
+title: データベースのインストール
+
+nav:
+  - index.md
+  - install-sql-server2025-express.md
+  - install-sql-server2022-express.md
+  - install-sql-server2019-express.md
+  - install-sql-server2017-express.md
+  - install-sql-server-management-studio.md
+  - install-postgresql-on-windows.md
+  - install-postgresql17-on-windows.md
+  - install-mysql-on-windows.md
+  - kvs-install.md

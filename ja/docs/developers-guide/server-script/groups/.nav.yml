@@ -1,0 +1,7 @@
+title: groups
+
+nav:
+  - index.md
+  - server-script-groups-create.md
+  - server-script-groups-get.md
+  - server-script-groups-update.md

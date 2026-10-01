@@ -1,0 +1,9 @@
+title: httpClient
+
+nav:
+  - index.md
+  - server-script-http-client-delete.md
+  - server-script-http-client-get.md
+  - server-script-http-client-patch.md
+  - server-script-http-client-post.md
+  - server-script-http-client-put.md

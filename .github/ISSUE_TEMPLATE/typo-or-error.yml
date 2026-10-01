@@ -1,0 +1,51 @@
+name: 誤りの報告
+description: マニュアルの誤字・誤った説明・リンク切れなどを知らせる
+title: "[誤り] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。**直し方が分かる場合は、プルリクエストでも歓迎です**（[はじめてのプルリクエストガイド](../blob/main/contribute/pr-primer.md)）。
+
+  - type: input
+    id: url
+    attributes:
+      label: ページのURL
+      description: 該当ページのURLを貼ってください。
+      placeholder: https://pleasanter.org/ja/manual/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: 該当箇所
+      description: 誤りがある見出しや段落、画像の位置を書いてください。文章をそのまま貼っていただけると探しやすいです。
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 誤っている内容
+      description: どこがどう誤っているかを書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正しいと思われる内容
+      description: 分かる範囲で構いません。根拠（実際の画面、動作の結果など）があれば添えてください。
+
+  - type: dropdown
+    id: lang
+    attributes:
+      label: 言語
+      options:
+        - 日本語版
+        - 英語版
+        - 両方
+    validations:
+      required: true

@@ -1,0 +1,14 @@
+title: Pleasanter Code Assist
+
+nav:
+  - index.md
+  - pleasanter-code-assist-overview.md
+  - pleasanter-code-assist-setup.md
+  - 使い方:
+    - pleasanter-code-assist-how-to-use-sites.md
+    - pleasanter-code-assist-how-to-use-extensions.md
+    - pleasanter-code-assist-how-to-use-code-completion.md
+    - pleasanter-code-assist-how-to-use-code-completion-jsconfig.md
+  - pleasanter-code-assist-feature.md
+  - pleasanter-code-assist-create-workfolder.md
+  - pleasanter-code-assist-extensions-restriction.md

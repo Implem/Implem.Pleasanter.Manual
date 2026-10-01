@@ -1,0 +1,4 @@
+nav:
+  - index.md
+  - site-no-display-if-read-only.md
+  - site-no-inherit.md

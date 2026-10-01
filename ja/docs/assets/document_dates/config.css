@@ -1,0 +1,28 @@
+/* document-dates プラグインの見た目の上書き（プラグインが core.css の後に読む）
+ *
+ * ★ ページ上部の作成日・更新日の文字が薄く、WCAG AA のコントラスト比 4.5:1 に届いていなかった（#324）。
+ *   プラグインの既定は rgba(142, 142, 142, 0.7)。白地で約 2.1:1、ダークモードの地でも足りない。
+ *   ライト・ダークそれぞれで 4.5:1 以上になる色にする。
+ *     ライト（地 #ffffff） … #616161（約 6.2:1）
+ *     ダーク（地 slate、約 #1e2029） … #a6a9b6（約 6.9:1）
+ *   このファイルは ja・en で同じ内容。
+ */
+.md-main .document-dates-plugin {
+    color: #616161;
+}
+[data-md-color-scheme="slate"] .md-main .document-dates-plugin {
+    color: #a6a9b6;
+}
+
+/* ★ トップページの「最近の更新」カード（プラグインがページ内の <style> で色を決める）の
+ *   日付・読了時間も薄く、ライト 2.55:1・ダーク 1.78:1 だった（#324）。上と同じ色にする。
+ *   ページ内の <style> より後に効くよう、セレクタを強くしている。
+ */
+.md-main .article-card .card-date,
+.md-main .article-card .card-footer .read-time {
+    color: #616161;
+}
+[data-md-color-scheme="slate"] .md-main .article-card .card-date,
+[data-md-color-scheme="slate"] .md-main .article-card .card-footer .read-time {
+    color: #a6a9b6;
+}

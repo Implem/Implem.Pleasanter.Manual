@@ -1,0 +1,13 @@
+title: 管理者ガイド
+
+nav:
+  - 管理者ガイド: index.md
+  - テーブルの管理: manage-table
+  - テナント管理機能: tenant-administration
+  - ユーザ管理機能: user-administration
+  - グループ管理機能: group-administration
+  - 組織管理機能: department-administration
+  - システムログ管理機能: system-log-administration
+  - MCPログ管理機能: mcp-log-adminnistration
+  - 稼働状況の確認: ops-status-check
+  - パラメータ管理機能: manage-parameter

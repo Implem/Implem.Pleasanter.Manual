@@ -1,0 +1,7 @@
+title: SCIM機能
+
+nav:
+  - index.md
+  - scim-pleasanter-setup.md
+  - scim-idp-setup.md
+  - scim-sync-custom-attributes.md

@@ -1,0 +1,10 @@
+nav:
+  - index.md
+  - dept-new-edit.md
+  - dept-disable.md
+  - dept-delete.md
+  - dept-bulk-delete.md
+  - dept-restore.md
+  - dept-physical-delete.md
+  - dept-import.md
+  - dept-export.md

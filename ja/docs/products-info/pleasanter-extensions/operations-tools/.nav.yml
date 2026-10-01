@@ -1,0 +1,28 @@
+title: 運用支援ツール Operations Tools
+
+nav:
+  - index.md
+  - operations-tools-overview.md
+  - セットアップ:
+      - operations-tools-setup.md
+      - operations-tools-setup-docker.md
+  - 運用レポート:
+      - operations-tools-operation-general.md
+      - operations-tools-operation-performance-by-day.md
+      - operations-tools-operation-performance-by-time.md
+  - 利用状況詳細:
+      - operations-tools-usage-by-day.md
+      - operations-tools-usage-by-month.md
+      - operations-tools-usage-login.md
+      - operations-tools-usage-outgoingmails.md
+      - operations-tools-usage-api-requests.md
+  - 監視アラート:
+      - operations-tools-monitoring-alert-setting.md
+      - operations-tools-monitoring-system-talbes.md
+      - operations-tools-monitoring-sites.md
+  - operations-tools-sites.md
+  - operations-tools-permissions.md
+  - operations-tools-parameters.md
+  - 共通機能:
+      - operations-tools-common-site-menu.md
+      - operations-tools-common-export.md

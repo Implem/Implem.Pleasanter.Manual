@@ -1,0 +1,17 @@
+title: パフォーマンス
+
+nav:
+  - index.md
+  - block-site-task-while-running.md
+  - キューイング機能:
+      - queuing-manage-jobs.md
+      - queuing-manage-jobs-screen.md
+      - queuing-manage-jobs-multi-node.md
+  - レートリミット機能:
+      - ratelimit.md
+      - ratelimit-policy-threshold-setting.md
+      - ratelimit-metrics.md
+  - enable-site-settings-cache.md
+  - long-term-summary-sync.md
+  - reminder-db-load-reduction.md
+  - kvs.md

@@ -1,0 +1,343 @@
+/* docs/stylesheets/extra.css
+   mdx-badge: 本家 Material for MkDocs の _typeset.scss に準拠したバッジスタイル
+
+   設計方針:
+   - カラーはテーマの --md-accent-fg-color / --md-accent-fg-color--transparent に一任
+   - 型の区別はアイコンの形のみで行い、色分けはしない
+   - 構造・サイズ・余白は本家 SCSS に準拠
+*/
+
+/* バッジブロック（独立行に配置する wrapper） */
+.md-typeset .mdx-badge-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-bottom: 1em;
+}
+
+/* バッジ共通 */
+.md-typeset .mdx-badge {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  font-size: 0.85em;
+}
+
+/* アイコン領域
+   - 左端 2px 角丸
+   - background でテーマアクセント色の薄い塗り
+   - アイコン単体のとき（:last-child）は全辺を角丸にする */
+.md-typeset .mdx-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  background-color: var(--md-accent-fg-color--transparent);
+  border-start-start-radius: 0.125rem;
+  border-end-start-radius: 0.125rem;
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .mdx-badge__icon:last-child {
+  border-radius: 0.125rem;
+}
+
+.md-typeset .mdx-badge__icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: block;
+}
+
+/* テキスト領域
+   - 右端 2px 角丸
+   - inset box-shadow でアイコン背景と同色の枠線を再現（border なし）
+   - 文字色はページの通常テキスト色 */
+.md-typeset .mdx-badge__text {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.375rem;
+  border-start-end-radius: 0.125rem;
+  border-end-end-radius: 0.125rem;
+  box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+  color: var(--md-default-fg-color);
+}
+
+/* 「このページは役に立ちましたか？」の見た目（#91 / PR #94 の指摘） --------------
+ *
+ * ★ テーマ既定では、選択肢の名前が button の title 属性にしか入らない。
+ *   マウスを載せないと読めず、タッチ端末では読めない。
+ *   DOM に文字が無いので、`content: attr(title)` で見えるようにする。
+ *
+ * ★ あわせて押し間違いを防ぐため、2つのボタンの間隔を広げ、
+ *   当たり判定そのものも大きくする（タップの目安 44px を確保）。
+ */
+.md-feedback__list {
+  gap: 1.5rem;                 /* 既定は margin 0 .1rem しかなく近すぎる */
+  align-items: stretch;
+}
+
+.md-feedback__icon {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  margin: 0;
+  min-width: 5.5rem;
+  min-height: 2.2rem;          /* 44px 相当。タップしやすくする */
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.2rem;
+  line-height: 1.3;
+}
+
+/* 選択肢の名前を文字として出す。mkdocs.yml の ratings[].name が title に入る */
+.md-feedback__icon::after {
+  content: attr(title);
+  font-size: 0.64rem;
+  white-space: nowrap;
+}
+
+.md-feedback__icon:not(:disabled):hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* 押したあとは操作できないことが分かるようにする */
+.md-feedback__icon:disabled {
+  cursor: default;
+}
+
+/* 画面が狭いときは縦に積む */
+@media screen and (max-width: 29.9375em) {
+  .md-feedback__list { gap: 0.75rem; }
+}
+
+/* サイドバーのバナー（#102）
+   旧マニュアルは各画像の style 属性に直接書いていた（width:100%; margin-bottom:15px）。
+   同じ見た目になるようにこちらへ寄せる。
+   画面が狭いときサイドバーはドロワーになるが、そこでも同じ幅で出る。 */
+.md-sidebar-banner {
+  margin: 0.8rem 0.6rem 0.9375rem;   /* 15px = 0.9375rem。ナビとの間を少し空ける */
+}
+
+.md-sidebar-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.1rem;
+}
+
+/* 印刷には出さない */
+@media print {
+  .md-sidebar-banner { display: none; }
+}
+
+/* SATORI のポップアップを、テーマの影響から切り離す（#175）
+
+   ★ 症状
+   画面右下のオレンジのタブから、白い文字がはみ出して見える。
+
+   ★ なぜ起きるか
+   SATORI の配信物は **ふつうの文書（16px・content-box）に載る前提**で作られている。
+   このテーマは配信物が差し込まれる <body> の直下に、次の2つを敷いている。
+
+     html { box-sizing: border-box }  +  *, ::before, ::after { box-sizing: inherit }
+       → SATORI 側が指定していない要素まで border-box になる。
+         padding を持つ箱は内側が狭くなり、**中の文字がはみ出す。**
+
+     html { font-size: 125% }（1600px以上で 137.5%、2000px以上で 150%）
+     body { font-size: .5rem }
+       → 継承される文字は 10〜12px、rem での指定は 20〜24px を基準に解決される。
+         **どちらの向きにもずれる。**
+
+   ★ 指定を弱くしてある（:where で詳細度 0）
+   SATORI 側が明示している指定は**そのまま勝たせる。**
+   ここで戻すのは「SATORI が何も言っていない箇所」だけ。
+   詳細度を上げると配信物の意図を壊すので、上げないこと。
+   テーマの `*` 規則と同じ詳細度だが、extra.css のほうが後に読まれるので効く。
+
+   ★ 確かめきれていないこと
+   配信 API が 204 を返すため、**手元でポップアップを出して確認できていない。**
+   配信物が rem で組まれている場合、rem は root を見るのでこれでは戻らない。
+   その場合は SATORI の管理画面側で px へ直す必要がある。 */
+:where(#satori__creative_container, [class*="satori__popup"]),
+:where(#satori__creative_container, [class*="satori__popup"]) :where(*, ::before, ::after) {
+  box-sizing: content-box;
+}
+
+:where(#satori__creative_container, [class*="satori__popup"]) {
+  font-size: 16px;
+}
+
+/* アクセシビリティ（#324。WCAG 2.1 AA） ----------------------------------------
+ *
+ * ★ ライトモードのリンクの色（テーマの teal #009485）が白地で 3.76:1 しかなく、
+ *   AA の 4.5:1 に届いていなかった。ほぼ全ページで引っかかる原因だった。
+ *   teal の一段濃い色（#00796b、白地で約 5.3:1）にする。ヘッダーの色（primary）は変えない。
+ */
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #00796b;
+}
+
+/* 左メニュー・目次で、いま開いている項目の文字はテーマの primary（#009485）で塗られ、
+ * 薄い teal の背景に対して 3.33:1 だった。ライトモードだけ同じ濃い teal にする（約 4.7:1）。
+ */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__link--active {
+  color: #00796b;
+}
+
+/* ★ 文中のリンクが、周りの文字と色だけで区別されていた（link-in-text-block）。
+ *   ダークモードでは本文の文字とリンクの色の差が 1.16:1 しかない。
+ *   本文の段落・箇条書き・表の中のリンクに下線を付ける（ライト・ダーク共通）。
+ *   ボタン・見出しのリンク記号・コードの注釈・トップのカード形式のリンクには付けない。
+ */
+.md-typeset :is(p, li, td, th, dd) > a:not(.md-button, .headerlink, .md-annotation__index) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.md-typeset .grid.cards li > a,
+.md-typeset .grid.cards li > p > a {
+  text-decoration: none;
+}
+
+/* ★ ダークモードで、コードの色付けの 2 色と、フッターの著作権表示が 4.5:1 に届いていなかった
+ *   （数値 4.44:1、定数 4.48:1、著作権表示 4.05:1）。色味は変えずに少し明るくする。
+ */
+[data-md-color-scheme="slate"] {
+  --md-code-hl-number-color: #ef8074;
+  --md-code-hl-constant-color: #a597ea;
+}
+[data-md-color-scheme="slate"] .md-copyright {
+  color: hsla(var(--md-hue), 15%, 90%, 0.72);
+}
+
+/* 本文の赤字を、意味のあるクラスで書けるようにする（#344）
+ *
+ *   .pl-negative  … 読み飛ばすと意味が逆になる語の強調（「でない」「含まない」など）
+ *   .pl-callout   … スクリーンショットに赤で描き込んだ番号（➊➋❸）と本文の対応づけ
+ *   .pl-attention … 注意を引く赤字（「※」「※1」の記号、注意の一文）
+ *
+ * 色の定義はここ1か所。ライトとダークで別の色を当てる。
+ * 書き方は contribute/markup-guide.md の「強調」を参照。
+ */
+.md-typeset .pl-negative,
+.md-typeset .pl-callout,
+.md-typeset .pl-attention {
+  color: #c62828;
+}
+[data-md-color-scheme="slate"] .md-typeset .pl-negative,
+[data-md-color-scheme="slate"] .md-typeset .pl-callout,
+[data-md-color-scheme="slate"] .md-typeset .pl-attention {
+  color: #ff6e6e;
+}
+
+/* Enterprise Edition の案内の枠（#405。docs/hooks/main.py の EE_NOTICES）
+ *
+ * ★ 押し売りにしない。制限に当たっていない読者にも見えるので、本文より小さく、控えめな枠にする。
+ */
+.md-typeset .ee-notice {
+  margin: 2em 0 1em;
+  padding: 0.6em 1em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+}
+.md-typeset .ee-notice p {
+  margin: 0.3em 0;
+}
+.md-typeset .ee-notice__links a {
+  margin-right: 1.2em;
+  white-space: nowrap;
+}
+
+/* フッターの共通の案内（#716。overrides/partials/footer.html）
+ *
+ * ★ 押し売りにしない。調べものの場所なので、本文より小さく、コピーライトの上に 1 行だけ置く。
+ * ★ 画面が狭いときは縦に積む。印刷には出さない。
+ */
+.md-footer-cta {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  background-color: var(--md-default-bg-color);
+  font-size: 0.7rem;
+}
+
+.md-footer-cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.2rem;
+  padding: 0.8rem 0.8rem;
+}
+
+.md-footer-cta__title {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-footer-cta__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-footer-cta__list a {
+  color: var(--md-typeset-a-color);
+  white-space: nowrap;
+}
+
+.md-footer-cta__list a:focus,
+.md-footer-cta__list a:hover {
+  text-decoration: underline;
+}
+
+/* 印刷には出さない */
+@media print {
+  .md-footer-cta { display: none; }
+}
+
+/* フッターのグレー地に置く、会社のページへのリンク（#721。overrides/partials/footer.html）
+ *
+ * ★ width:100% で独立した行にする。**これが無いと、テーマの space-between が 3 分割になり、
+ *   著作権表示とソーシャルアイコンの位置が動く。**
+ * ★ 余白と文字の大きさは .md-copyright に合わせる。色はテーマに任せる。
+ * ★ gap は、指が触れても隣を押さない間隔（#721 の「クリックミスが起こらない間隔」）。
+ */
+.md-footer-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.2rem;
+  margin: 0 0.6rem;
+  padding: 0 0 0.4rem;
+  font-size: 0.64rem;
+}
+
+/* ライト/ダークで画像を出し分ける（#717）
+ *
+ * ★ テーマは **ライト時に `#only-dark` を隠す規則しか持っていない。**
+ *   （`[data-md-color-scheme=default] img[src$="#only-dark"]{display:none}`）
+ *   ダーク時に `#only-light` を隠す規則が無いので、**足さないと両方出る。**
+ * ★ `data-md-color-scheme` は、テーマの「自動 / ライト / ダーク」のどれを選んでいても
+ *   いま画面に出ている見た目と一致する（自動のときはテーマの JS が OS を見て決める）。
+ *   SVG の中に `prefers-color-scheme` を書く方法では OS しか見えないため、この形にした。
+ */
+[data-md-color-scheme="slate"] img[src$="#only-light"] { display: none; }
+
+/* 有償機能バナーの枠（#717）
+ *
+ * ★ **本文の表と同じ枠**にする。バナーは白地・暗地なので、枠が無いと切れ目が分からない。
+ *   値はテーマの表からそのまま持ってきた。
+ *     .md-typeset table:not([class]) { border: .05rem solid var(--md-typeset-table-color); border-radius: .1rem }
+ * ★ **SVG の中に線を描かない。** 画像は本文の幅に合わせて縮むので、中の線も一緒に細くなる。
+ *   CSS で <img> に付ければ、表示の大きさによらず 0.05rem で、色もモードに追従する。
+ * ★ 対象は `#only-light` / `#only-dark` で出し分けている画像だけ。いまはバナーしかない。
+ */
+.md-typeset img[src$="#only-light"],
+.md-typeset img[src$="#only-dark"] {
+  border: 0.05rem solid var(--md-typeset-table-color);
+  border-radius: 0.1rem;
+}

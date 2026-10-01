@@ -1,0 +1,10 @@
+title: Pleasanter Site Visualizer
+
+nav:
+  - index.md
+  - pleasanter-site-visualizer-overview.md
+  - pleasanter-site-visualizer-setup.md
+  - 使い方:
+    - pleasanter-site-visualizer-how-to-use-sites.md
+    - pleasanter-site-visualizer-how-to-use-display-er-diagram.md
+    - pleasanter-site-visualizer-how-to-use-display-processes.md

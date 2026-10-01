@@ -1,0 +1,10 @@
+title: クラスタ化への備え
+
+nav:
+  - index.md
+  - clustering-attachments-store-local-storage.md
+  - clustering-parameter-redundant-sync.md
+  - data-protection-key-store.md
+  - warmup.md
+  - service-clustering.md
+  - clustering-attachment-item-settings.md

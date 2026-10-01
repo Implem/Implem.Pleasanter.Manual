@@ -1,0 +1,14 @@
+title: view
+
+nav:
+  - index.md
+  - server-script-view-add-column-placeholder.md
+  - server-script-view-always-get-columns.md
+  - server-script-view-clear-filters.md
+  - server-script-view-filter-negative.md
+  - server-script-view-filters.md
+  - server-script-view-filters-cleared.md
+  - server-script-view-id.md
+  - server-script-view-on-selecting-where.md
+  - server-script-view-search-types.md
+  - server-script-view-sorters.md

@@ -1,0 +1,16 @@
+nav:
+  - index.md
+  - table-management-create-view.md
+  - 詳細設定:
+      - table-management-view-default-mode.md
+      - 一覧タブ:
+          - table-management-view-list.md
+          - table-management-view-filter-totaling.md
+          - table-management-view-command-button.md
+      - フィルタタブ:
+          - table-management-view-filter-settings-editor.md
+          - table-management-view-keep-filter.md
+      - ソータタブ:
+          - table-management-view-keep-sorter.md
+      - アクセス制御タブ:
+          - table-management-view-permissions.md

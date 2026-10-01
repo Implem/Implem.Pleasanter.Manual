@@ -1,0 +1,36 @@
+title: API操作
+
+nav:
+  - index.md
+  - 値の操作:
+      - script-api-url.md
+  - レコード操作:
+      - script-api-get.md
+      - script-api-create.md
+      - script-api-update.md
+      - script-api-upsert.md
+      - script-api-delete.md
+      - script-api-bulk-delete.md
+  - サイト操作:
+      - script-api-get-site.md
+      - script-api-create-site.md
+      - script-api-update-site.md
+      - script-api-delete-site.md
+      - script-api-get-closest-siteid.md
+  - ユーザ情報操作:
+      - script-api-users-get.md
+      - script-api-users-create.md
+      - script-api-users-update.md
+      - script-api-users-delete.md
+  - 組織情報操作:
+      - script-api-depts-get.md
+      - script-api-depts-create.md
+      - script-api-depts-update.md
+      - script-api-depts-delete.md
+  - グループ情報操作:
+      - script-api-groups-get.md
+      - script-api-groups-create.md
+      - script-api-groups-update.md
+      - script-api-groups-delete.md
+  - コマンド操作:
+      - script-api-send-mail.md

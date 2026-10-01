@@ -1,0 +1,15 @@
+nav:
+  - index.md
+  - group-new-edit.md
+  - group-change-history.md
+  - group-add-user.md
+  - group-delete-user.md
+  - group-add-subgroup.md
+  - group-delete-subgroup.md
+  - group-disable.md
+  - group-delete.md
+  - group-bulk-delete.md
+  - group-restore.md
+  - group-physical-delete.md
+  - group-import.md
+  - group-export.md

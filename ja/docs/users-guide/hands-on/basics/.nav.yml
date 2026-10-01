@@ -1,0 +1,23 @@
+title: 基礎編
+
+nav:
+  - index.md
+  - basic-operations.md
+  - basic-operations-folder.md
+  - basic-operations-table.md
+  - basic-operations-new-record.md
+  - basic-operations-import.md
+  - basic-operations-read-record.md
+  - basic-operations-update-record.md
+  - basic-operations-delete-record.md
+  - basic-operations-editor.md
+  - basic-operations-grid.md
+  - basic-operations-new-user.md
+  - basic-operations-new-dept.md
+  - basic-operations-dept-member.md
+  - basic-operations-new-group.md
+  - basic-operations-group-member.md
+  - basic-operations-group-child.md
+  - basic-operations-access-control.md
+  - basic-operations-dashboard.md
+  - basic-operations-description.md

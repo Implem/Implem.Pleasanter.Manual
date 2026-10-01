@@ -1,0 +1,48 @@
+name: 改善の提案
+description: 説明の追加・分かりにくさの解消・新しいページの提案
+title: "[提案] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご提案ありがとうございます。**大きな追加や新機能のドキュメントは、先に issue で相談していただけると助かります**（[コントリビュータガイド](../blob/main/contribute/index.md)）。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 困っていること
+      description: いまのマニュアルで何が分からなかったか、どこで手が止まったかを書いてください。
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 関係するページのURL
+      description: 該当ページがあれば貼ってください。新しいページの提案であれば空で構いません。
+      placeholder: https://pleasanter.org/ja/manual/...
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案する内容
+      description: どう書かれていれば分かりやすいかを書いてください。
+
+  - type: dropdown
+    id: lang
+    attributes:
+      label: 言語
+      options:
+        - 日本語版
+        - 英語版
+        - 両方
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: ご自身で直すこともできますか
+      options:
+        - label: プルリクエストを出してもよい

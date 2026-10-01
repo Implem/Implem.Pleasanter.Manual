@@ -1,0 +1,31 @@
+title: エディタ
+
+nav:
+  - index.md
+  - smart-design-editor.md
+  - smart-design-editor-tab.md
+  - 基本項目:
+    - smart-design-editor-id.md
+    - smart-design-editor-version.md
+    - smart-design-editor-body.md
+    - smart-design-editor-title.md
+    - smart-design-editor-start-time.md
+    - smart-design-editor-completion-time.md
+    - smart-design-editor-work-value.md
+    - smart-design-editor-progress-rate.md
+    - smart-design-editor-remaining-work-value.md
+    - smart-design-editor-state.md
+    - smart-design-editor-lock.md
+    - smart-design-editor-manager.md
+    - smart-design-editor-owner.md
+  - 追加項目:
+    - smart-design-editor-class.md
+    - smart-design-editor-num.md
+    - smart-design-editor-date.md
+    - smart-design-editor-description.md
+    - smart-design-editor-check.md
+    - smart-design-editor-attachments.md
+    - smart-design-editor-link-table.md
+  - その他:
+    - smart-design-editor-line-break.md
+    - smart-design-editor-section.md

@@ -1,0 +1,7 @@
+nav:
+  - index.md
+  - manage-parameter-edit.md
+  - manage-parameters-reboot-from-screen.md
+  - manage-parameters-auto-reboot-settings.md
+  - manage-parameter-redundant-sync.md
+  - manage-parameter-enabled-on-docker.md

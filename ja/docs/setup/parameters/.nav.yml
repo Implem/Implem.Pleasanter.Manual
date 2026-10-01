@@ -1,0 +1,8 @@
+title: パラメータ設定
+
+nav:
+  - index.md
+  - parameter-edit.md
+  - parameter-name-change-deletesyslogs.md
+  - "*"
+  - credentials-in-environment-variables.md

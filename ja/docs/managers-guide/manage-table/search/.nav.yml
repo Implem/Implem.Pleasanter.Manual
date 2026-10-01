@@ -1,0 +1,8 @@
+nav:
+  - index.md
+  - 検索の設定:
+    - table-management-search-type.md
+    - table-management-disable-cross-search.md
+  - フルテキストの設定: fulltext-settings
+  - 操作:
+    - table-management-rebuild-search-indexes.md

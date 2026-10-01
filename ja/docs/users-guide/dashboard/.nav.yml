@@ -1,0 +1,14 @@
+title: ダッシュボード機能
+
+nav:
+  - index.md
+  - パーツの追加:
+    - dashboard-add-parts.md
+    - dashboard-quickaccess.md
+    - dashboard-timeline.md
+    - dashboard-custom.md
+    - dashboard-customhtml.md
+    - dashboard-calendar.md
+    - dashboard-kanban.md
+    - dashboard-grid.md
+  - dashboard-view.md

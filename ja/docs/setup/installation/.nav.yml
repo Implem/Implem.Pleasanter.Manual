@@ -1,0 +1,12 @@
+title: インストール
+
+nav:
+  - index.md
+  - install-with-installer
+  - install-manually
+  - prerequisites
+  - running-with-docker
+  - running-from-source
+  - windows-features
+  - install-dotnet
+  - install-database

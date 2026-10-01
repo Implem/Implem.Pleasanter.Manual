@@ -1,0 +1,14 @@
+nav:
+  - index.md
+  - table-management-choices-text-link.md
+  - table-management-choices-text-depts.md
+  - table-management-choices-text-groups.md
+  - table-management-choices-text-users.md
+  - table-management-choice-json.md
+  - table-management-choice-json-column-filter-expressions.md
+  - table-management-lookup.md
+  - table-management-copy-with-links.md
+  - table-management-delete-with-links.md
+  - table-management-select-new-link.md
+  - table-management-choices-text-own-user.md
+  - table-management-choices-text-own-dept.md

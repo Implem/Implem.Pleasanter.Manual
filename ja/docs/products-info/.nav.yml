@@ -1,0 +1,13 @@
+title: 製品情報
+
+nav:
+  - index.md
+  - enterprise-edition
+  - pleasanter-extensions
+  - extensions-trial
+  - limitations-database.md
+  - large-scale-ops-supports.md
+  - マルチテナント管理機能:
+    - manage-multi-tenant.md
+    - manage-multi-tenant-cueuing.md
+    - manage-multi-tenant-cueuing-clustering.md

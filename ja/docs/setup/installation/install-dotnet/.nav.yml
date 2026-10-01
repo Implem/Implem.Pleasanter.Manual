@@ -1,0 +1,7 @@
+title: .NETのインストール
+
+nav:
+  - index.md
+  - install-dotnet-windows.md
+  - install-dotnet-8.md
+  - install-dotnet-8-windows.md

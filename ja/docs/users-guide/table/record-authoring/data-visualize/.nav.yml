@@ -1,0 +1,16 @@
+title: データ可視化
+
+nav:
+  - index.md
+  - table-analy-chart.md
+  - レコードのカレンダー表示:
+    - table-calendar.md
+    - カレンダータイプ:
+      - table-calendar-type-standard.md
+      - table-calendar-type-fullcalendar.md
+  - table-crostab.md
+  - table-gantt-chart.md
+  - table-burndown-chart.md
+  - table-timeseries-chart.md
+  - table-kanban-chart.md
+  - table-imagelib.md

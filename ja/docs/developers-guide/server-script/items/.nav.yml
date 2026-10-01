@@ -1,0 +1,26 @@
+title: items
+
+nav:
+  - index.md
+  - server-script-items-average.md
+  - server-script-items-bulk-delete.md
+  - server-script-items-count.md
+  - server-script-items-create.md
+  - server-script-items-delete.md
+  - server-script-items-get.md
+  - server-script-items-get-closest-site.md
+  - server-script-items-get-site.md
+  - server-script-items-get-site-by-group-name.md
+  - server-script-items-get-site-by-name.md
+  - server-script-items-get-site-by-title.md
+  - server-script-items-max.md
+  - server-script-items-maxdate.md
+  - server-script-items-min.md
+  - server-script-items-mindate.md
+  - server-script-items-new-issue.md
+  - server-script-items-new-result.md
+  - server-script-items-new-site.md
+  - server-script-items-sum.md
+  - server-script-items-update.md
+  - server-script-items-upsert.md
+  - server-script-items-new.md

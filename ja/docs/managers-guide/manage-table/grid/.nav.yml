@@ -1,0 +1,14 @@
+nav:
+  - index.md
+  - table-management-grid-columns.md
+  - 詳細設定: advanced-settings
+  - table-management-bulk-update-multi-columns.md
+  - table-management-grid-page-size.md
+  - table-management-default-view.md
+  - table-management-permission-view-reset.md
+  - table-management-grid-editor-type.md
+  - table-management-history-on-grid.md
+  - table-management-always-request-search-condition.md
+  - table-management-disable-link-to-edit.md
+  - table-management-enable-expand-link-path.md
+  - table-management-open-edit-in-new-tab.md

@@ -1,0 +1,8 @@
+title: DBサーバ
+
+nav:
+  - index.md
+  - backup-sql-server.md
+  - postgre-create-fulltext-index.md
+  - mysql-connecting-host-description.md
+  - mysql-create-user-by-sql.md

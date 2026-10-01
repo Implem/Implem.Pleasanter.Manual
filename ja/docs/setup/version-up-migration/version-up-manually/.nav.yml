@@ -1,0 +1,11 @@
+title: バージョンアップ
+
+nav:
+  - index.md
+  - version-up-windows-1.4.8.0.md
+  - version-up-azure-1.4.8.0.md
+  - version-up-linux-1.4.8.0.md
+  - version-up-net.md
+  - version-up-azure.md
+  - version-up-net-core.md
+  - version-up-pleasanter-docker.md

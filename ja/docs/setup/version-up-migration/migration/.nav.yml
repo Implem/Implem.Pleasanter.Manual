@@ -1,0 +1,17 @@
+title: 移行
+
+nav:
+  - index.md
+  - migrate-to-pleasanter-windows.md
+  - migrate-to-pleasanter14-windows.md
+  - migrate-netfw-to-pleasanter-windows.md
+  - migrate-to-pleasanter-appservice.md
+  - migrate-to-pleasanter-ubuntu.md
+  - migrate-to-pleasanter14-ubuntu.md
+  - migration-preparation.md
+  - migrate-to-pleasanter-centos.md
+  - migrate-to-other-environment-pleasanter-net5.md
+  - migrate.md
+  - migrate-sql-server-to-postgresql.md
+  - default-api-version-1-1.md
+  - migrate-netfw-to-pleasanter-15-windows.md

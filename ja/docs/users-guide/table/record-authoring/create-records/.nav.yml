@@ -1,0 +1,11 @@
+title: レコード作成
+
+nav:
+  - index.md
+  - table-record-new.md
+  - table-record-import.md
+  - table-record-import-and-link.md
+  - table-record-import-key.md
+  - table-record-import-migrate-mode.md
+  - table-record-import-and-update.md
+  - table-record-import-fail.md

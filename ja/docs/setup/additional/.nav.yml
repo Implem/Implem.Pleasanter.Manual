@@ -1,0 +1,13 @@
+title: 追加設定
+
+nav:
+  - index.md
+  - web-server
+  - db-server
+  - notifications
+  - security
+  - performance
+  - authn-authz
+  - account-integration
+  - ready-for-clustering
+  - ops-management

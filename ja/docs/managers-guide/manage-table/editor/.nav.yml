@@ -1,0 +1,22 @@
+title: エディタ
+
+nav:
+  - index.md
+  - エディタの設定: editor-settings
+  - その他の項目の設定: other-columns-settings
+  - タブの設定: tab-settings
+  - 項目連携の設定: relating-column-settings
+  - 多言語ラベル設定: multilingual-label-settings
+  - 自動バージョンアップ: automatic-version-upgrade
+  - 作成後の動作: after-create-action
+  - 更新後の動作: after-update-action
+  - コメントの編集を許可: allow-editing-comments
+  - コピーを許可: allow-copy
+  - 参照コピーを許可: allow-reference-copy
+  - コピー時に追加する文字: characters-to-add-when-copying
+  - 分割を許可: allow-separating-record
+  - テーブルのロックを許可: allow-lock-table
+  - リンクを表示しない: hide-link
+  - レコードの遷移にAjaxを使用: switch-record-with-ajax
+  - 自動ポストバック時にコマンドボタンを切り替える: switch-command-buttons-during-automatic-postback
+  - 削除時に画像を削除: delete-image-when-deleting

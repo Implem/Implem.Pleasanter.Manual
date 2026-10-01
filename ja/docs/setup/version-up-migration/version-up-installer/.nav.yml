@@ -1,0 +1,8 @@
+title: インストーラでバージョンアップ
+
+nav:
+  - index.md
+  - version-up-installer-windows.md
+  - version-up-installer-azure.md
+  - version-up-installer-linux.md
+  - version-up-ver1.4.17.0-caution.md

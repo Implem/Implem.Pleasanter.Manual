@@ -1,0 +1,11 @@
+title: スクリプト
+
+nav:
+  - index.md
+  - get-site-info
+  - update-site-info
+  - site-message
+  - script-api
+  - value-operations
+  - events
+  - uncategorized

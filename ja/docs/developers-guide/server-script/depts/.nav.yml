@@ -1,0 +1,7 @@
+title: depts
+
+nav:
+  - index.md
+  - server-script-depts-create.md
+  - server-script-depts-get.md
+  - server-script-depts-update.md
